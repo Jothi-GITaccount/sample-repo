@@ -1,0 +1,50 @@
+import java.io.FileInputStream;
+
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+public class AirwatchLogin {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver","D:\\chromedriver_win32\\chromedriver.exe");
+		//Launching Chrome Page
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://qcaw.dev.aetherpal.com");
+		
+//Comparing URL
+		
+ if (driver.getCurrentUrl().contains("https://qcaw.dev.aetherpal.com"))
+ {
+	 System.out.println("Airwatch URL is correctly loaded");
+ }
+ else
+ {
+	 System.out.println("Wrong URL");
+ }
+ 
+ //Comparing Page Title
+	if (driver.getTitle().contains("AirWatch"))
+	  {
+		 System.out.println("Airwatch Console is successfully loaded");
+	  }
+	 else
+	 {
+		 System.out.println("Wrong Console");
+     }
+	
+/*/ Login Details
+	 
+	FileInputStream fi = new FileInputStream("C:\\Users\\Hemavathy\\Desktop\\logindetails.xlsx");
+	Workbook w = Workbook.getWorkbook(fi);
+	s = w.getSheet(0);
+    int z=s.getRows();
+	System.out.println("no of rows:"+z); */
+
+	}
+}
