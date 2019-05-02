@@ -4,7 +4,7 @@ public class tristar {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-//commit
+//commites
 		int i,j;
 		for(i=1; i<=6; i++)
 		{
